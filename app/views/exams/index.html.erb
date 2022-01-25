@@ -1,0 +1,21 @@
+<h3>ひっかっかった検査項目は？</h3>
+ 
+    <table>
+      <thead>
+        <tr>
+          <th>画像</th>
+          <th>検査項目</th>
+          <th>検査の目的</th>
+        </tr>
+      </thead>
+ 
+      <tbody>
+        <% @exams.each do |exam| %>
+          <tr>
+            <td><%= exam.exam_image %></td>
+            <td><%= exam.exam_item %></td>
+            <td><%= exam.exam_purpose %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>

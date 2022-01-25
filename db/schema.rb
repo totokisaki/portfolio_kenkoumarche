@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_23_083312) do
+ActiveRecord::Schema.define(version: 2022_01_25_145049) do
+
+  create_table "checkups", force: :cascade do |t|
+    t.binary "checkup_image"
+    t.string "checkup_item"
+    t.string "checkup_purpose"
+    t.text "checkup_advice"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "exams", force: :cascade do |t|
+    t.binary "exam_image"
+    t.string "exam_item"
+    t.string "exam_purpose"
+    t.text "exam_advice"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
