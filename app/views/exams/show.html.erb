@@ -1,0 +1,25 @@
+<h3>詳細</h3>
+ 
+    <table>
+      <tr>
+        <td><%= @exam.exam_image %></td>
+      </tr>
+      <tr>
+        <th>検査項目</th>
+        <td><%= @exam.exam_item %></td>
+      </tr>
+      <tr>
+        <th>検査目的</th>
+        <td><%= @exam.exam_purpose %></td>
+      </tr>
+      <tr>
+        <th>食事・生活アドバイス</th
+        <td><%= @exam.exam_advice %></td>
+      </tr>
+    </table>
+ 
+    <div>
+      <ul>
+        <li><%= link_to "一覧に戻る", :exams %></li>
+      </ul>
+    </div>
