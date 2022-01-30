@@ -8,7 +8,7 @@ class ExamsController < ApplicationController
   end
 
   def create
-    @exam = Exam.new(params.require(:exam).permit(:exam_image, :exam_item, :exam_purpose, :exam_advice))
+    @exam = Exam.new(params.require(:exam).permit(:exam_image, :exam_item, :exam_purpose, :exam_advice, :user_id))
       if @exam.save
         flash[:notice] = "登録しました"
         redirect_to :exams
@@ -19,6 +19,7 @@ class ExamsController < ApplicationController
 
   def show
     @exam = Exam.find(params[:id])
+    @reserve = Reserve.new
   end
 
   def edit
@@ -37,8 +38,8 @@ class ExamsController < ApplicationController
 
   def destroy
     @exam = Exam.find(params[:id])
-      @exam.destroy
-      flash[:notice] = "削除しました"
-      redirect_to :exams
+    @exam.destroy
+    flash[:notice] = "削除しました"
+    redirect_to :exams
   end
 end

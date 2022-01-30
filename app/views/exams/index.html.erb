@@ -15,12 +15,12 @@
       <tbody>
         <% @exams.each do |exam| %>
           <tr>
-            <td><%= exam.exam_image %></td>
+            <td><%= image_tag exam.exam_image, :size =>'200x150'  %></td>
             <td><%= exam.exam_item %></td>
             <td><%= exam.exam_purpose %></td>
             <td><%= link_to "アドバイスをみる", exam %></td>
             <td><%= link_to "編集", [:edit, exam] %></td>
-            <td><%= link_to "削除", exam, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
+            <td><%= button_to "削除", exam, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
           </tr>
         <% end %>
       </tbody>

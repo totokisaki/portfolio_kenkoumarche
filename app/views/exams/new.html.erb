@@ -21,11 +21,15 @@
       <th><%= f.label :exam_advice ,"食事・生活アドバイス" %></th>
       <td><%= f.text_area :exam_advice %></td>
     </tr>
+
+    <tr>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+    </tr>
   </table>
  
   <div>
     <ul>
-      <li><%= f.submit "登録する"%></li>
+      <li><%= f.submit "登録する" %></li>
       <li><%= link_to "一覧に戻る", :exams %></li>
     </ul>
   </div>
