@@ -14,12 +14,10 @@
         <% @reserves.each do |reserve| %>
           <tr>
             <td><%= reserve.exam.exam_item %></td>
-            <td><%= reserve.room.room_info%></td>
-            <td><%= reserve.room.room_price %></td>
-            <td><%= reserve.start_date %></td>
-            <td><%= reserve.end_date %></td>
+            <td><%= reserve.reserve_date %></td>
+            <td><%= reserve.reserve_time %></td>
             <td><%= reserve.created_at %></td>
-            <td><%= link_to "削除", reserve, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
+            <td><%= link_to "予約のキャンセル", reserve, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
           </tr>
         <% end %>
         

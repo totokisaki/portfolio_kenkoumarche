@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hikakatter</title>
+    <title>Hikkakatter</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -23,7 +23,7 @@
   <% if user_signed_in? %>
   <h4> メールアドレス： <%= current_user.email %> </h4>
   <%= link_to "検査項目", :exams %>
-  <p><%= link_to "検査アドバイス新規登録", :new_exam %></p>
+  <p><%= link_to "新しい項目の追加", :new_exam %></p>
   <%= button_to "ログアウト", destroy_user_session_path, method: :delete %>
 <% else %>
   <%= link_to "ログイン", new_user_session_path, class: 'post' %> 

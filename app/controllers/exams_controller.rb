@@ -1,6 +1,6 @@
 class ExamsController < ApplicationController
   def index
-    @exams = Exam.all
+    @exams = Exam.where(user_id: current_user.id )
   end
 
   def new
