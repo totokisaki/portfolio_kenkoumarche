@@ -47,8 +47,8 @@
   }
   
   body {
-    color: #2d3133;
-    background-color: #3ecdc6;
+    color: #2f506a;
+    background-color: #fcfcfc;
     margin: 0;
     min-height: 1vh;
   }
@@ -72,7 +72,6 @@
   
   header {
     height: 64px;
-    position: absolute;
     z-index: 1;
     width: 100%;
   }
@@ -80,13 +79,13 @@
   .header-logo {
     float: left;
     padding-left: 20px;
-    color: white;
+    color: #2f506a;
     font-size: 22px;
     line-height: 64px;
   }
   
   .header-logo a{
-    color: white;
+    color: #2f506a;
     font-size: 22px;
   }
   
@@ -99,14 +98,14 @@
     float: left;
     line-height: 64px;
     font-size: 13px;
-    color: white;
+    color: #2f506a;
     padding-left: 15px;
   }
   
   .header-menus a {
     float: left;
     font-size: 13px;
-    color: white;
+    color: #2f506a;
   }
   
   .header-menus .fa {
@@ -117,7 +116,7 @@
     padding: 0 20px;
     float: left;
     line-height: 64px;
-    color: white;
+    color: #2f506a;
     margin: 0;
     font-size: 13px;
   }
@@ -130,8 +129,8 @@
     width: 100%;
     height: auto;
     min-height: 100%;
-    color: white;
-    background-color: #3ecdc6;
+    color: #2f506a;
+    background-color: #fcfcfc;
     background-repeat: no-repeat;
     background-position: center 50%;
     background-size: cover;
@@ -155,7 +154,7 @@
   
   .about-main {
     padding: 180px 8% 0;
-    color: white;
+    color:#2f506a;
   }
   
   .about-main h2 {

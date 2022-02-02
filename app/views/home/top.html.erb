@@ -2,15 +2,18 @@
   <div class="top-message">
     <h2>からだは食事でできている</h2>
     <p>ひっかかったら相談だ！</p>
+    <p>健診でひっかかった人、食生活の相談をしたい人のためのSNS</p>
   </div>
 
   <% if user_signed_in? %>
-  <h4> メールアドレス： <%= current_user.email %> </h4>
    <%= link_to "検査項目", :exams %>
-   <p><%= link_to "新しい項目の追加", :new_exam %></p>
+   <p><%= link_to "新規投稿", :new_exam %></p>
+   <p><%= link_to "投稿履歴", :exams  %></p>
+   <p><%= link_to "予約一覧", :reserves  %></p>
    <%= button_to "ログアウト", destroy_user_session_path, method: :delete %>
   <% else %>
    <%= link_to "ログイン", new_user_session_path, class: 'post' %> 
-  <%= link_to "新規登録", new_user_registration_path, class: 'post' %> 
+   <%= link_to "新規登録", new_user_registration_path, class: 'post' %> 
  <% end %>
+
 </div>

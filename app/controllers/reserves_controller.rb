@@ -8,7 +8,7 @@ class ReservesController < ApplicationController
     @reserve = Reserve.new
     @exam = Exam.find(params[:exam_id])
   end
- 
+
   def create
     @reserve = Reserve.new(params.require(:reserve).permit(:reserve_date, :reserve_time, :user_id , :exam_id))
         if @reserve.save
@@ -18,16 +18,16 @@ class ReservesController < ApplicationController
           render template: "rooms/show"
         end
   end
- 
+
   def show
   end
- 
+
   def edit
   end
- 
+
   def update
   end
- 
+  
   def destroy
     @reserve = Reserve.find(params[:id])
         @reserve.destroy
