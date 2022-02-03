@@ -104,7 +104,7 @@
   
   .header-menus a {
     float: left;
-    font-size: 13px;
+    font-size: 20px;
     color: #2f506a;
   }
   
@@ -138,8 +138,19 @@
   
   .top-message {
     position: relative;
+    margin-bottom: 100px;
   }
   
+  .top-message a{
+    color:#2f506a;
+    margin: 20px;
+    font-size: 30px;
+  }
+
+  .top-message a:hover{
+    color: #dce4e9;
+  }
+
   .top-main h2 {
     font-size: 70px;
     font-weight: 500;
@@ -149,9 +160,38 @@
   }
   
   .top-main p {
-    font-size: 24px;
+    font-weight: 200;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  .top-main a {
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+
+  .top-link {
+    color:#2f506a;
+    margin: 20px;
+    font-size: 20px;
+    display: inline-block;
+    height: 30px;
+    width: 200px;
+    background-color: #dce4e9;
   }
   
+  .top-link:hover{
+    color: #b4cad8;
+  }
+
+  button {
+    border: none;
+    background: transparent;
+  }
+
   .about-main {
     padding: 180px 8% 0;
     color:#2f506a;

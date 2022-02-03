@@ -1,19 +1,21 @@
 <div class="main top-main">
   <div class="top-message">
-    <h2>からだは食事でできている</h2>
-    <p>ひっかかったら相談だ！</p>
-    <p>健診でひっかかった人、食生活の相談をしたい人のためのSNS</p>
+  <h2>Hikakatter</h2>
+  <p>健診で引っかかった検査項目が何の検査かわかる！</p>
+  <p>改善するための食事・生活アドバイスがわかる！</p>
+  <p>記事を書いた人に直接相談ができる！</p>
+  <a href= "home/about">Hikakatterをもっと詳しく</a>
   </div>
 
   <% if user_signed_in? %>
-   <%= link_to "検査項目", :exams %>
-   <p><%= link_to "新規投稿", :new_exam %></p>
-   <p><%= link_to "投稿履歴", :exams  %></p>
-   <p><%= link_to "予約一覧", :reserves  %></p>
-   <%= button_to "ログアウト", destroy_user_session_path, method: :delete %>
+   <p><%= link_to "検査項目", :exams, class:'top-link' %></p>
+   <p><%= link_to "新規投稿", :new_exam, class:'top-link' %></p>
+   <p><%= link_to "投稿履歴", :exams, class:'top-link' %></p>
+   <p><%= link_to "予約一覧", :reserves, class:'top-link' %></p>
+   <p><%= button_to "ログアウト", destroy_user_session_path, method: :delete, class:'top-link' %></p>
   <% else %>
-   <%= link_to "ログイン", new_user_session_path, class: 'post' %> 
-   <%= link_to "新規登録", new_user_registration_path, class: 'post' %> 
+   <p><%= link_to "ログイン", new_user_session_path, class: 'top-link' %></p>
+   <p><%= link_to "新規登録", new_user_registration_path, class: 'top-link' %></p> 
  <% end %>
 
 </div>
