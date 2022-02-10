@@ -1,0 +1,2 @@
+class Kcal < ApplicationRecord
+end

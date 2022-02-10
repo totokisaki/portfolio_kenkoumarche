@@ -1,0 +1,2 @@
+module KcalsHelper
+end

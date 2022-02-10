@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :kcals
+  get 'kcals/index'
   resources :reserves
   get 'reserves/index'
   resources :exams

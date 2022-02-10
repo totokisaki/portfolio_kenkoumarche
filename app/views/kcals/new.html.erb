@@ -1,0 +1,33 @@
+<p>計算をするので数字を入力してください。</p> 
+<%= form_for :kcal,url: kcals_path do |f| %> 
+
+<table>
+    <tr>
+      <th><%= f.label :height ,"身長(cm)" %></th>
+      <td><%= f.number_field :height %></td>
+    </tr>
+ 
+    <tr>
+      <th><%= f.label :weight ,"体重(kg)" %></th>
+      <td><%= f.number_field :weight %></td>
+    </tr>
+ 
+    <tr>
+     <th><%= f.label :activities ,"身体活動レベル" %></th>
+     <td>
+       <p>低い: <%= f.check_box :activities ,{ multiple: true }, 30, nil %></p>
+       <p>普通: <%= f.check_box :activities ,{ multiple: true }, 32, nil %></p>
+       <p>高い: <%= f.check_box :activities ,{ multiple: true }, 35, nil %></p>
+     </td>
+    </tr>
+</table>
+
+<div>
+    <ul>
+      <li><%= f.submit "計算する" %></li>
+    </ul>
+  </div>
+
+
+  
+<% end %>
