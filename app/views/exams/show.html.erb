@@ -1,6 +1,6 @@
 <h3>詳細</h3>
  
-    <table>
+    <table class="exam_table" >
       <tr>
         <td><%= image_tag @exam.exam_image , :size =>'300x300' %></td>
       </tr>
@@ -29,14 +29,10 @@
  
     <%= form_with model: @reserve do |f| %>
       <table>
+       
         <tr>
-          <th><%= f.label :reserve_date ,"予約日" %></th>
-          <td><%= f.date_select :reserve_date %></td>
-        </tr>
- 
-        <tr>
-          <th><%= f.label :reserve_time ,"時間" %></th>
-          <td><%= f.date_select :reserve_time %></td>
+          <th><%= f.label :reserve_time ,"予約日時" %></th>
+          <td><%= f.datetime_select :reserve_time %></td>
         </tr>
  
       </table>

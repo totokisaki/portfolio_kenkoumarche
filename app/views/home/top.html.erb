@@ -1,14 +1,41 @@
 <div class="main top-main">
   <div class="top-message">
   <h2>Hikkakatter</h2>
-  <p>健診で引っかかった検査項目が何の検査かわかる！</p>
-  <p>改善するための食事・生活アドバイスがわかる！</p>
-  <p>もっと詳しく知りたい場合は直接相談ができる！</p>
-  <a href= "home/about">Hikkakatterをもっと詳しく</a>
+  <h3>~ﾋｯｶｶｯﾀｰ~</h3>
+  <p>食事で健康になりたい全ての方へ</p>
+  </div>
+
+  <div class="top-about">
+   <div class="top-about-m">
+    <p>ヒッカカッターは、検査でひっかかった、ちょっと体重が気になる、綺麗になりたい... そんな人たちが健康的な食事を身につけるためのアプリです。</p>
+   </div>
+   <a href= "home/about">Hikkakatterをもっと詳しく</a>
+  </div>
+
+  <div class="top-kcal">
+  </div>
+
+  <div class="top-record">
+  </div>
+
+  <div class="top-exam">
+  <table>
+      <tbody>
+        <% @exams.each do |exam| %>
+          <tr class="top_exam_table">
+            <td><%= exam.exam_item %></td>
+            <td><%= exam.exam_purpose %></td>
+            <td><%= link_to "アドバイスをみる", exam %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>  
+
+  <div class="top-thought">
   </div>
 
   <% if user_signed_in? %>
-   <p><%= link_to "検査項目", :exams, class:'top-link' %></p>
    <p><%= link_to "新規投稿", :new_exam, class:'top-link' %></p>
    <p><%= link_to "投稿履歴", :exams, class:'top-link' %></p>
    <p><%= link_to "予約一覧", :reserves, class:'top-link' %></p>
