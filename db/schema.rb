@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_10_153503) do
+ActiveRecord::Schema.define(version: 2022_02_11_150346) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -67,11 +67,31 @@ ActiveRecord::Schema.define(version: 2022_02_10_153503) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "mouths", force: :cascade do |t|
+    t.string "mouth_title"
+    t.text "mouth_contents"
+    t.string "mouth_star"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "reserves", force: :cascade do |t|
     t.date "reserve_date"
     t.time "reserve_time"
     t.integer "user_id"
     t.integer "exam_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "restaurants", force: :cascade do |t|
+    t.string "store_name"
+    t.string "address"
+    t.string "genre"
+    t.binary "store_image"
+    t.integer "price"
+    t.integer "user_id"
+    t.integer "mouth_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

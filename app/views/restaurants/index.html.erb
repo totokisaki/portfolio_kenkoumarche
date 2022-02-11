@@ -1,0 +1,26 @@
+<h3>お店、レストランをさがす</h3>
+ 
+<table>
+  <thead>
+    <tr>
+      <th>写真</th>
+      <th>店舗名</th>
+      <th>所在地</th>
+      <th>ジャンル</th>
+      <th>価格帯</th>
+    </tr>
+  </thead>
+ 
+  <tbody>
+    <% @restaurants.each do |restaurant| %>
+      <tr>
+        <td><%= image_tag restaurant.store_image, :size =>'150x150' %></td>
+        <td><%= restaurant.store_name %></td>
+        <td><%= restaurant.address %></td>
+        <td><%= restaurant.genre %></td>
+        <td><%= restaurant.price %></td>
+        <td><%= button_to "削除", restaurant, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

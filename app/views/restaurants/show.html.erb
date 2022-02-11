@@ -1,0 +1,51 @@
+    <table>
+     <tr> 
+        <td><%= @restaurant.store_image %></td>
+      </tr>
+      <tr>
+        <th>店舗名</th>
+        <td><%= @restaurant.store_name %></td>
+      </tr>
+      <tr>
+        <th>所在地</th>
+        <td><%= @restaurant.address %></td>
+      </tr>
+      <tr>
+        <th>ジャンル</th>
+        <td><%= @restaurant.genre %></td>
+      </tr>
+      <tr>
+        <th>価格帯</th
+        <td><%= @restaurant.price %></td>
+      </tr>
+    </table>
+ 
+    <div>
+      <ul>
+        <li><%= link_to "一覧に戻る", :restaurants %></li>
+      </ul>
+    </div>
+
+
+    <h3>口コミを書く</h3>
+ 
+    <%= form_with model: @mouth do |f| %>
+      <table>
+        <tr>
+          <th><%= f.label :mouth_title ,"タイトル" %></th>
+          <td><%= f.text_field :mouth_title %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :mouth_contents ,"内容" %></th>
+          <td><%= f.text_area :mouth_contents %></td>
+        </tr>
+        
+      </table>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.hidden_field :restaurant_id, value: @restaurant.id %>
+      <div>
+        <ul>
+          <li><%= f.submit "予約"%></li>
+        </ul>
+      </div>
+    <% end %>

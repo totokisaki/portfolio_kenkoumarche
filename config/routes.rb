@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :restaurants
+  get 'restaurants/index'
   resources :kcals
   get 'kcals/index'
   resources :reserves
