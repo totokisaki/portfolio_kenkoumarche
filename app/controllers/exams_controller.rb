@@ -42,4 +42,8 @@ class ExamsController < ApplicationController
     flash[:notice] = "削除しました"
     redirect_to :exams
   end
+
+  def search
+    @exams = Exam.all
+  end
 end

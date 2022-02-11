@@ -22,7 +22,7 @@ class KcalsController < ApplicationController
     @activities = @kcal["activities"] 
     @standardweight = @height * @height * 22
     @bmi = @weight / @height / @height
-    @requiredcalories = @standardweight * @activities
+    @requiredcalories = @height * @height * 22 * @activities
   end
 
   def edit

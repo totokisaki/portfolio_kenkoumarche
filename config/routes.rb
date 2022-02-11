@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   get 'kcals/index'
   resources :reserves
   get 'reserves/index'
-  resources :exams
+  resources :exams do
+   get :search, on: :collection
+  end
   get 'exams/index'
   devise_for :users, controllers: {
     registrations: 'users/registrations',

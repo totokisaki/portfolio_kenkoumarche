@@ -140,6 +140,7 @@
   .top-message {
     position: relative;
     margin-bottom: 100px;
+    padding: 100px;
   }
 
   .top-message a{
@@ -153,9 +154,16 @@
     color: #dce4e9;
   }
 
+  .top-title {
+    font-size: 20px;
+    color: #2d3133;
+    margin: 40px;
+  }
+
   .top-about {
     position: relative;
-    margin-bottom: 100px;
+    padding: 100px;
+    background-color: #f5f5f5;
   }
 
   .top-about-m {
@@ -179,26 +187,52 @@
 
   .top-kcal {
     position: relative;
-    margin-bottom: 100px;
-    background-color: #f5f5f5;
+    padding: 100px;
+    background-color: #fcfcfc;
+  }
+
+  .top-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    background: repeating-linear-gradient(45deg, #ffffff, #ffffff 3px, #e7e7e7 3px, #e7e7e7 30px);
+    color: #333;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    position: relative;
+  }
+
+  .top-link:hover {
+    left: 3px;
+    top: 3px;
   }
 
   .top-record {
     position: relative;
-    margin-bottom: 100px;
+    padding: 100px;
     background-color: #f5f5f5;
   }
 
   .top-exam {
     position: relative;
-    margin-bottom: 100px;
+    padding: 100px;
+    background-color: #fcfcfc;
+  }
+
+  .top-reserve {
+    position: relative;
+    padding: 100px;
     background-color: #f5f5f5;
   }
 
   .top-thought {
     position: relative;
-    margin-bottom: 100px;
-    background-color: #f5f5f5;
+    padding: 100px;
+    background-color: #fcfcfc;
   }
 
   .top-main h2 {
@@ -221,21 +255,6 @@
     font-size: 20px;
     margin-top: 10px;
     margin-right: 10px;
-  }
-
-  .top-link {
-    color:#2f506a;
-    margin: 20px;
-    font-size: 20px;
-    display: inline-block;
-    height: 30px;
-    width: 200px;
-    background-color: #dce4e9;
-    border-top-right-radius:15px;
-  }
-  
-  .top-link:hover{
-    color: #b4cad8;
   }
 
   button {
@@ -321,11 +340,8 @@
   }
 
   .top_exam_table {
-    height: auto;
-    width: auto;
-    padding: 10px;
-    margin: 10px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+    padding-bottom: 20px;
   }
 
   .exam_table {
@@ -337,15 +353,15 @@
 
   table th {
     background-color: #f5f5f5;
-    padding: 10px 20px;
-    text-align:center;
-}
+    padding: 20px;
+    text-align: center;
+  }
  
-table td {
+  table td {
     background-color: #f9ecd5;
-    padding: 10px 20px;
-    text-align:center;
-}
+    padding: 20px;
+    text-align: center;
+  }
  
 .notice {
     background-color: #ccf;
