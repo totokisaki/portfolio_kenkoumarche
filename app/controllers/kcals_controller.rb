@@ -12,7 +12,7 @@ class KcalsController < ApplicationController
   end
 
   def kcal_params 
-    params.require(:kcal).permit(:height, :weight, :activities) 
+    params.require(:kcal).permit(:height, :weight, :activities)
   end
 
   def show

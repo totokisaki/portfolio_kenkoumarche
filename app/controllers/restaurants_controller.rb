@@ -1,6 +1,7 @@
 class RestaurantsController < ApplicationController
   def index
     @restaurants = Restaurant.all
+    @mouths = Mouth.all
   end
 
   def new
@@ -12,12 +13,13 @@ class RestaurantsController < ApplicationController
       if @restaurant.save
         redirect_to :restaurants
       else
-        render "new"
+        render "mouths"
       end
   end
 
   def show
     @restaurant = Restaurant.find(params[:id])
+    @mouth = Mouth.new
   end
 
   def edit

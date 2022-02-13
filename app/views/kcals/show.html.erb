@@ -1,0 +1,13 @@
+<div class="kcal">
+<h3>計算結果が出ました！</h3>
+ <div class="kcal-item">
+ <h4 class="kcal-item-a" >あなたの標準体重は<%= @standardweight.round %>kgです</h4>
+ <h4 class="kcal-item-b">標準体重は、もっとも病気にかかりにくい体重と言われています</h4>
+ <h4 class="kcal-item-a" >あなたのBMIは<%= @bmi.round %>です</h4>
+ <h4 class="kcal-item-b">BMIの値は、18.5～25までを正常とし、それ以下は「痩せ」、それ以上は「肥満」と判定します</h4>
+ <h4 class="kcal-item-b">25を超えると脂質異常症や糖尿病、高血圧などの生活習慣病のリスクが2倍以上になり、30を超えると高度な肥満としてより積極的な減量治療を要するものとされています。</h4>
+ <h4 class="kcal-item-a" >あなたの必要エネルギー量は<%= @requiredcalories.round %>Kcal/日です</h4>
+ <h4 class="kcal-item-b">このエネルギー量(カロリー)を基準に、食べる量を見直してみましょう！</h4>
+ <h4 class="kcal-item-b">これを基準に、たくさん食べてしまうと太る、少ないと痩せる、ということです</h4>
+ </div>
+</div>

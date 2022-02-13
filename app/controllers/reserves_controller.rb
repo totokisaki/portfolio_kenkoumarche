@@ -15,7 +15,7 @@ class ReservesController < ApplicationController
           flash[:notice] = "予約が完了をしました"
           redirect_to :reserves
         else
-          render template: "rooms/show"
+          render template: "exams/show"
         end
   end
 

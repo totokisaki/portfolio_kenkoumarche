@@ -1,4 +1,8 @@
-<p>計算をするので数字を入力してください。</p> 
+<div class="kcal">
+<h2 class="kcal_title">あなたの標準体重と、１日の適正エネルギー量をチェックしましょう！</h2> 
+<h4 class="kcal_title">あなたが元気で過ごすために必要な1日の推定エネルギー量を求めることができます</h4>
+<h4 class="kcal_title">※14歳以下の方、妊婦、授乳婦の方はあてはまりません。</h4>
+<h3 class="kcal_title">まずはあなたの基本情報を入力して下さい。これらのデータがあなたの標準体重、基礎代謝量（生命維持に必要な最低限のエネルギー）を算出する要素となります。</h3>
 <%= form_for :kcal,url: kcals_path do |f| %> 
 
 <table>
@@ -15,19 +19,15 @@
     <tr>
      <th><%= f.label :activities ,"身体活動レベル" %></th>
      <td>
-       <p>低い: <%= f.check_box :activities ,{ multiple: true, include_hidden: false }, 30 %></p>
-       <p>普通: <%= f.check_box :activities ,{ multiple: true, include_hidden: false }, 32 %></p>
-       <p>高い: <%= f.check_box :activities ,{ multiple: true, include_hidden: false }, 35 %></p>   
+       <p><%= f.radio_button :activities, 30 %>あまり動かない・座っていることが多い</p>
+       <p><%= f.radio_button :activities, 32 %>普通くらいの活動量である</p>
+       <p><%= f.radio_button :activities, 35 %>スポーツをしている・重労働である</p>
      </td>
     </tr>
 </table>
 
-<div>
-    <ul>
-      <li><%= f.submit "計算する" %></li>
-    </ul>
+  <div class="kcal_button">
+    <%= f.submit "エネルギー量を計算する" %>
   </div>
-
-
-  
 <% end %>
+</div>

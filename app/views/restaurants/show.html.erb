@@ -1,6 +1,6 @@
     <table>
-     <tr> 
-        <td><%= @restaurant.store_image %></td>
+      <tr> 
+        <td><%= image_tag @restaurant.store_image , :size =>'300x300' %></td>
       </tr>
       <tr>
         <th>店舗名</th>
@@ -15,7 +15,7 @@
         <td><%= @restaurant.genre %></td>
       </tr>
       <tr>
-        <th>価格帯</th
+        <th>価格帯</th>
         <td><%= @restaurant.price %></td>
       </tr>
     </table>
@@ -41,11 +41,10 @@
         </tr>
         
       </table>
-      <%= f.hidden_field :user_id, value: current_user.id %>
       <%= f.hidden_field :restaurant_id, value: @restaurant.id %>
       <div>
         <ul>
-          <li><%= f.submit "予約"%></li>
+          <li><%= f.submit "口コミを書く"%></li>
         </ul>
       </div>
     <% end %>
