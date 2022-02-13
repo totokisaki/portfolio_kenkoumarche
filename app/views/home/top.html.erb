@@ -20,8 +20,8 @@
 
   <div class="top-restaurant">
   <div class="top-title" >おすすめのお店をさがす</div>
-  <p><%= link_to "お店をさがす", :restaurants, class:'top-link' %></p>
   <% if user_signed_in? %>
+  <p><%= link_to "お店をさがす", :restaurants, class:'top-link' %></p>
   <p><%= link_to "店舗情報新規登録", :new_restaurant, class:'top-link' %></p>
   <p><%= button_to "ログアウト", destroy_user_session_path, method: :delete, class:'top-link' %></p>
   <% else %>
@@ -32,8 +32,8 @@
 
   <div class="top-exam">
   <div class="top-title" >検査から調べる</div>
-  <p><%= link_to "検査項目からさがす", :search_exams, class:'top-link' %></p>
   <% if user_signed_in? %>
+  <p><%= link_to "検査項目からさがす", :search_exams, class:'top-link' %></p>
   <p><%= link_to "アドバイスを投稿する", :new_exam, class:'top-link' %></p>
   <p><%= link_to "投稿履歴", :exams, class:'top-link' %></p>
   <p><%= button_to "ログアウト", destroy_user_session_path, method: :delete, class:'top-link' %></p>

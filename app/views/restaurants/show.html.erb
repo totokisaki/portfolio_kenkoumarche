@@ -30,25 +30,48 @@
       </ul>
     </div>
 
+    <h3>投稿一覧</h3>
+ 
+    <table>
+      <thead>
+        <tr>
+          <th>タイトル</th>
+          <th>投稿内容</th>
+          <th>投稿日時</th>
+        </tr>
+      </thead>
+ 
+      <tbody>
+        <% @posts.each do |post| %>
+          <tr>
+            <td><%= post.post_title %></td>
+            <td><%= post.post_contents %></td>
+            <td><%= post.created_at.to_s(:datetime_jp) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-    <h3>口コミを書く</h3>
- 
-    <%= form_with model: @mouth do |f| %>
+
+    <h3>口コミを投稿</h3>
+ 
+    <%= form_with model: @post do |f| %>
       <table>
         <tr>
-          <th><%= f.label :mouth_title ,"タイトル" %></th>
-          <td><%= f.text_field :mouth_title %></td>
+          <th><%= f.label :post_title, "タイトル" %></th>
+          <td><%= f.text_area :post_title, class:"posts-content" %></td>
         </tr>
         <tr>
-          <th><%= f.label :mouth_contents ,"内容" %></th>
-          <td><%= f.text_area :mouth_contents %></td>
+          <th><%= f.label :post_title, "内容" %></th>
+          <td><%= f.text_area :post_contents, class:"posts-content" %></td>
         </tr>
-        
       </table>
       <%= f.hidden_field :restaurant_id, value: @restaurant.id %>
       <div>
         <ul>
-          <li><%= f.submit "口コミを書く"%></li>
+          <li><%= f.submit "投稿する"%></li>
         </ul>
       </div>
     <% end %>
+ 
+    <div>

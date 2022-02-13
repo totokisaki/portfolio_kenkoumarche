@@ -1,0 +1,47 @@
+<h3>投稿詳細</h3>
+ 
+    <table>
+      <tr>
+        <th>タイトル</th>
+        <td><pre><%= @post.post_title %></pre></td>
+      </tr>
+      <tr>
+        <th>内容</th>
+        <td><pre><%= @post.post_contents %></pre></td>
+      </tr>
+      <tr>
+        <th>投稿日時</th>
+        <td><%= @post.created_at.to_s(:datetime_jp) %></td>
+      </tr>
+    </table>
+ 
+    <h3>お店詳細</h3>
+ 
+    <table>
+      <tr>
+        <th>店名</th>
+        <td><%= @post.restaurant.store_name %></td>
+      </tr>
+      <tr>
+        <th>住所</th>
+        <td><%= @post.restaurant.address %></td>
+      </tr>
+      <tr>
+        <th>ジャンル</th>
+        <td><%= @post.restaurant.genre %></td>
+      </tr>
+      <tr>
+        <th>価格帯</th>
+        <td><%= @post.restaurant.price %></td>
+      </tr>
+      <tr>
+        <th>店舗画像</th>
+        <td><%= image_tag @post.restaurant.store_image , :size =>'300x300' %></td>
+      </tr>
+    </table>
+ 
+    <div>
+      <ul>
+        <li><%= link_to "一覧に戻る", :restaurants %></li>
+      </ul>
+    </div>

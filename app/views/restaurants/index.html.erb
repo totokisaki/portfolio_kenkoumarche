@@ -27,26 +27,4 @@
     <% end %>
   </tbody>
 </table>
-
-<h3>口コミ</h3>
- 
-    <table>
-      <thead>
-        <tr>
-          <th>タイトル</th>
-          <th>内容</th>
-        </tr>
-      </thead>
- 
-      <tbody>
-        <% @mouths.each do |mouth| %>
-          <tr>
-            <td><%= mouth.mouth_title %></td>
-            <td><%= mouth.mouth_contents %></td>
-            <td>
-              <%= link_to "削除", post, method: :delete, data: { confirm: "本当に削除しますか？" } %>
-            </td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+ 

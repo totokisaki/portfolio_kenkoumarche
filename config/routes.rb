@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :mouths
-  get 'mouths/index'
+  resources :posts
+  get 'posts/index'
   resources :restaurants
   get 'restaurants/index'
   resources :kcals

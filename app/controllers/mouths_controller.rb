@@ -1,19 +1,17 @@
 class MouthsController < ApplicationController
   def index
-    @mouths = Mouth.where(restaurant_id: current_restaurant.id )
-    @mouth = Mouth.all
   end
 
   def new
-    @mouth = MouthsController.new
+    @mouth = Mouth.new
     @restaurant = Restaurant.find(params[:restaurant_id])
   end
 
   def create
-    @mouth = Mouth.new(params.require(:mouth).permit(:mouth_title, :mouth_contents, :restaurant_id))
+    @mouth = Mouth.new(params.require(:mouth).permit(:mouth_title, :mouth_contents, :restaurant_id))   
         if @mouth.save
           flash[:notice] = "口コミを投稿をしました"
-          redirect_to :mouths
+          redirect_to :resutaurants
         else
           render template: "restaurants/show"
         end
