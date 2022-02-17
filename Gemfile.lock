@@ -141,6 +141,7 @@ GEM
     nokogiri (1.13.1-x86_64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (0.20.0)
     pry (0.14.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -238,6 +239,7 @@ DEPENDENCIES
   devise
   importmap-rails
   jbuilder
+  pg (= 0.20.0)
   pry-rails
   puma (~> 5.0)
   rails (~> 7.0.1)
