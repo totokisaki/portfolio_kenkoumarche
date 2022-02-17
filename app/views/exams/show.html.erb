@@ -1,0 +1,50 @@
+<h3>詳細</h3>
+ 
+    <table>
+      <tr>
+        <td><%= image_tag @exam.exam_image , :size =>'300x300' %></td>
+      </tr>
+      <tr>
+        <th>検査項目</th>
+        <td><%= @exam.exam_item %></td>
+      </tr>
+      <tr>
+        <th>検査目的</th>
+        <td><%= @exam.exam_purpose %></td>
+      </tr>
+      <tr>
+        <th>食事・生活アドバイス</th>
+        <td><%= @exam.exam_advice %></td>
+      </tr>
+    </table>
+ 
+    <div>
+      <ul>
+        <li><%= link_to "一覧に戻る", :exams %></li>
+      </ul>
+    </div>
+
+
+    <h3>個別相談の予約はこちら！</h3>
+ 
+    <%= form_with model: @reserve do |f| %>
+      <table>
+        <tr>
+          <th><%= f.label :reserve_date ,"予約日" %></th>
+          <td><%= f.date_select :reserve_date %></td>
+        </tr>
+ 
+        <tr>
+          <th><%= f.label :reserve_time ,"時間" %></th>
+          <td><%= f.date_select :reserve_time %></td>
+        </tr>
+ 
+      </table>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+      <%= f.hidden_field :exam_id, value: @exam.id %>
+      <div>
+        <ul>
+          <li><%= f.submit "予約"%></li>
+        </ul>
+      </div>
+    <% end %>

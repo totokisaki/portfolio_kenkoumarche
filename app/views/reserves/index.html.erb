@@ -1,0 +1,25 @@
+<h3>個別相談予定</h3>
+ 
+    <table>
+      <thead>
+        <tr>
+          <th>検査項目</th>
+          <th>予約日</th>
+          <th>時間</th>
+          <th>予約確定日時</th>
+        </tr>
+      </thead>
+ 
+      <tbody>
+        <% @reserves.each do |reserve| %>
+          <tr>
+            <td><%= reserve.exam.exam_item %></td>
+            <td><%= reserve.reserve_date %></td>
+            <td><%= reserve.reserve_time %></td>
+            <td><%= reserve.created_at %></td>
+            <td><%= link_to "予約のキャンセル", reserve, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
+          </tr>
+        <% end %>
+        
+      </tbody>
+    </table>

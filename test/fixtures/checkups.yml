@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  checkup_image: 
+  checkup_item: MyString
+  checkup_purpose: MyString
+  checkup_advice: MyText
+
+two:
+  checkup_image: 
+  checkup_item: MyString
+  checkup_purpose: MyString
+  checkup_advice: MyText

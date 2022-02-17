@@ -1,0 +1,21 @@
+<h3>一覧</h3>
+ 
+<table>
+  <thead>
+    <tr>
+      <th>画像</th>
+      <th>検査項目</th>
+      <th>検査の目的</th>
+    </tr>
+  </thead>
+ 
+  <tbody>
+    <% @checkups.each do |checkup| %>
+      <tr>
+        <td><%= checkup.checkup_image %></td>
+        <td><%= checkup.checkup_item %></td>
+        <td><%= checkup.checkup_purpose %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
