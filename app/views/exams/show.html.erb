@@ -1,7 +1,10 @@
-<h3>詳細</h3>
+<div class="page-top">
+  <p>検査項目を詳しくみる</p>
+</div>
  
-    <table>
+    <table class="show_table" >
       <tr>
+        <th> </th>
         <td><%= image_tag @exam.exam_image , :size =>'300x300' %></td>
       </tr>
       <tr>
@@ -25,26 +28,22 @@
     </div>
 
 
-    <h3>個別相談の予約はこちら！</h3>
- 
+    <div class="page-top">
+     <h3>個別相談の予約はこちら！</h3>
+    </div>
+
+    <div class="reserve" >
     <%= form_with model: @reserve do |f| %>
-      <table>
+      <table class="show_table" >
         <tr>
-          <th><%= f.label :reserve_date ,"予約日" %></th>
-          <td><%= f.date_select :reserve_date %></td>
+          <th><%= f.label :reserve_time ,"予約日時" %></th>
+          <td><%= f.datetime_select :reserve_time %></td>
         </tr>
- 
-        <tr>
-          <th><%= f.label :reserve_time ,"時間" %></th>
-          <td><%= f.date_select :reserve_time %></td>
-        </tr>
- 
       </table>
       <%= f.hidden_field :user_id, value: current_user.id %>
       <%= f.hidden_field :exam_id, value: @exam.id %>
       <div>
-        <ul>
-          <li><%= f.submit "予約"%></li>
-        </ul>
+        <%= f.submit "予約" , class: "reserve_button" %>
       </div>
     <% end %>
+    </div>

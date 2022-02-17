@@ -1,0 +1,30 @@
+<div class="page-top">
+  <h3>おいしく健康に食べれるお店をさがす</h3>
+</div>
+ 
+<table class="list_table" >
+  <thead>
+    <tr>
+      <th>写真</th>
+      <th>店舗名</th>
+      <th>所在地</th>
+      <th>ジャンル</th>
+      <th>価格帯</th>
+    </tr>
+  </thead>
+ 
+  <tbody>
+    <% @restaurants.each do |restaurant| %>
+      <tr>
+        <td><%= image_tag restaurant.store_image, :size =>'200x150' %></td>
+        <td><%= restaurant.store_name %></td>
+        <td><%= restaurant.address %></td>
+        <td><%= restaurant.genre %></td>
+        <td><%= restaurant.price %>円〜</td>
+        <td><%= link_to "詳細", restaurant %></td>
+        <td><%= button_to "削除", restaurant, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+ 

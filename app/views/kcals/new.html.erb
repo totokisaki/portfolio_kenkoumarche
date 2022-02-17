@@ -1,0 +1,36 @@
+<div class="page-top">
+  <h3>あなたの標準体重と、１日の適正エネルギー量をチェックしましょう！</h3>
+</div>
+
+<div class="kcal">
+<p class="kcal_title">あなたが元気で過ごすために必要な1日の推定エネルギー量を求めることができます</p>
+<p class="kcal_title">※14歳以下の方、妊婦、授乳婦の方はあてはまりません。</p>
+<p class="kcal_title">まずはあなたの基本情報を入力して下さい。これらのデータがあなたの標準体重、基礎代謝量（生命維持に必要な最低限のエネルギー）を算出する要素となります。</p>
+<%= form_for :kcal,url: kcals_path do |f| %> 
+
+<table>
+    <tr>
+      <th><%= f.label :height ,"身長(cm)" %></th>
+      <td><%= f.number_field :height %></td>
+    </tr>
+ 
+    <tr>
+      <th><%= f.label :weight ,"体重(kg)" %></th>
+      <td><%= f.number_field :weight %></td>
+    </tr>
+ 
+    <tr>
+     <th><%= f.label :activities ,"身体活動レベル" %></th>
+     <td>
+       <p><%= f.radio_button :activities, 30 %>あまり動かない・座っていることが多い</p>
+       <p><%= f.radio_button :activities, 32 %>普通くらいの活動量である</p>
+       <p><%= f.radio_button :activities, 35 %>スポーツをしている・重労働である</p>
+     </td>
+    </tr>
+</table>
+
+  <div class="kcal_button">
+    <%= f.submit "エネルギー量を計算する" %>
+  </div>
+<% end %>
+</div>

@@ -1,27 +1,23 @@
 <div class="page-top">
-  <p>投稿した内容を確認する</p>
+  <p>検査項目からさがす</p>
 </div>
  
-    <table class="exam_table" >
+    <table class="list_table" >
       <thead>
         <tr>
           <th>画像</th>
           <th>検査項目</th>
           <th>検査の目的</th>
           <th>食事・生活</th>
-          <th>編集</th>
-          <th>削除</th>
         </tr>
       </thead>
       <tbody>
         <% @exams.each do |exam| %>
           <tr>
-            <td><%= image_tag exam.exam_image, :size =>'150x150' %></td>
+            <td><%= image_tag exam.exam_image, :size =>'150x150'  %></td>
             <td><%= exam.exam_item %></td>
             <td><%= exam.exam_purpose %></td>
             <td><%= link_to "アドバイスをみる", exam %></td>
-            <td><%= link_to "編集", [:edit, exam] %></td>
-            <td><%= button_to "削除", exam, method: :delete, data: { confirm: "本当に削除しますか？" } %></td>
           </tr>
         <% end %>
       </tbody>

@@ -1,0 +1,41 @@
+<div class="page-top">
+  <h3>店舗情報新規登録</h3>
+</div>
+ 
+    <%= form_with model: @restaurant do |f| %>
+      <table>
+        <tr>
+          <th><%= f.label :store_name ,"店舗名" %></th>
+          <td><%= f.text_field :store_name %></td>
+        </tr>
+
+        <tr>
+          <th><%= f.label :address ,"所在地" %></th>
+          <td><%= f.text_field :address %></td>
+        </tr>
+
+        <tr>
+          <th><%= f.label :genre ,"ジャンル" %></th>
+          <td><%= f.text_field :genre %></td>
+        </tr>
+
+        <tr>
+          <th><%= f.label :price ,"価格帯" %></th>
+          <td><%= f.number_field :price, min: 0 %></td>
+        </tr>
+
+        <tr>
+          <th><%= f.label :store_image ,"写真" %></th>
+          <td><%= f.file_field :store_image %></td>
+        </tr>
+
+        <tr>
+          <%= f.hidden_field :user_id, value: current_user.id %>
+        </tr>
+      </table>
+      <div>
+        <ul>
+          <li><%= f.submit "登録完了する"%></li>
+        </ul>
+      </div>
+    <% end %>

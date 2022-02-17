@@ -1,0 +1,81 @@
+<div class="page-top">
+<h3>お店情報</h3>
+</div>
+   
+   <table class="show_table" >
+      <tr> 
+        <th> </th>
+        <td><%= image_tag @restaurant.store_image , :size =>'500x400' %></td>
+      </tr>
+      <tr>
+        <th>店舗名</th>
+        <td><%= @restaurant.store_name %></td>
+      </tr>
+      <tr>
+        <th>所在地</th>
+        <td><%= @restaurant.address %></td>
+      </tr>
+      <tr>
+        <th>ジャンル</th>
+        <td><%= @restaurant.genre %></td>
+      </tr>
+      <tr>
+        <th>価格帯</th>
+        <td><%= @restaurant.price %></td>
+      </tr>
+    </table>
+ 
+    <div>
+      <ul>
+        <li><%= link_to "一覧に戻る", :restaurants %></li>
+      </ul>
+    </div>
+
+    <div class="page-top">
+     <h3>口コミ一覧</h3>
+    </div>
+
+    <table class="show_table" >
+      <thead>
+        <tr>
+          <th>タイトル</th>
+          <th>投稿内容</th>
+          <th>投稿日時</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @posts.each do |post| %>
+          <tr>
+            <td><%= post.post_title %></td>
+            <td><%= post.post_contents %></td>
+            <td><%= post.created_at.to_s(:datetime_jp) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <div class="page-top">
+     <h3>口コミを投稿</h3>
+    </div>
+    <div class="reserve" >
+    <%= form_with model: @post do |f| %>
+      <table>
+        <tr>
+          <th><%= f.label :post_title, "タイトル" %></th>
+          <td><%= f.text_area :post_title, class:"posts-content" %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :post_title, "内容" %></th>
+          <td><%= f.text_area :post_contents, class:"posts-content" %></td>
+        </tr>
+      </table>
+      <%= f.hidden_field :restaurant_id, value: @restaurant.id %>
+      <div>
+        <ul>
+          <li><%= f.submit "投稿する" , class: "reserve_button" %></li>
+        </ul>
+      </div>
+    <% end %>
+    </div>
+    </div>

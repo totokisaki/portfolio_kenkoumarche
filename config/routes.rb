@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
+  resources :posts
+  get 'posts/index'
+  resources :restaurants
+  get 'restaurants/index'
+  resources :kcals
+  get 'kcals/index'
   resources :reserves
   get 'reserves/index'
-  resources :exams
+  resources :exams do
+   get :search, on: :collection
+  end
   get 'exams/index'
   devise_for :users, controllers: {
     registrations: 'users/registrations',
