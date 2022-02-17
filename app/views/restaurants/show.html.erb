@@ -2,9 +2,10 @@
 <h3>お店情報</h3>
 </div>
    
-   <table>
+   <table class="show_table" >
       <tr> 
-        <td><%= image_tag @restaurant.store_image , :size =>'300x300' %></td>
+        <th> </th>
+        <td><%= image_tag @restaurant.store_image , :size =>'500x400' %></td>
       </tr>
       <tr>
         <th>店舗名</th>
@@ -30,9 +31,11 @@
       </ul>
     </div>
 
-    <h3>投稿一覧</h3>
- 
-    <table>
+    <div class="page-top">
+     <h3>口コミ一覧</h3>
+    </div>
+
+    <table class="show_table" >
       <thead>
         <tr>
           <th>タイトル</th>
@@ -40,7 +43,7 @@
           <th>投稿日時</th>
         </tr>
       </thead>
- 
+
       <tbody>
         <% @posts.each do |post| %>
           <tr>
@@ -52,9 +55,10 @@
       </tbody>
     </table>
 
-
-    <h3>口コミを投稿</h3>
- 
+    <div class="page-top">
+     <h3>口コミを投稿</h3>
+    </div>
+    <div class="reserve" >
     <%= form_with model: @post do |f| %>
       <table>
         <tr>
@@ -69,9 +73,9 @@
       <%= f.hidden_field :restaurant_id, value: @restaurant.id %>
       <div>
         <ul>
-          <li><%= f.submit "投稿する"%></li>
+          <li><%= f.submit "投稿する" , class: "reserve_button" %></li>
         </ul>
       </div>
     <% end %>
- 
-    <div>
+    </div>
+    </div>

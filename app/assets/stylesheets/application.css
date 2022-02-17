@@ -84,6 +84,13 @@
     color: #1c273e;
     font-size: 22px;
   }
+
+  .fotter {
+    position: relative;
+    padding: 30px;
+    background-color: #ffffff;
+    font-size: 5px;
+  }
   
   .top-main {
     text-align: center;
@@ -200,9 +207,9 @@
     width: 100%;
     height: 50px;
     box-sizing: border-box;
-    background: repeating-linear-gradient(45deg, #ffffff, #ffffff 3px, #e7e7e7 3px, #e7e7e7 30px);
+    background: repeating-linear-gradient(45deg, #f5f6ca, #f5f6ca 1px, #fad463 3px, #fad463 30px);
     color: #333;
-    font-size: 14px;
+    font-size: 20px;
     letter-spacing: 0.1em;
     text-decoration: none;
     position: relative;
@@ -229,12 +236,6 @@
     position: relative;
     padding: 100px;
     background-color: #efeeea;
-  }
-
-  .top-thought {
-    position: relative;
-    padding: 100px;
-    background-color: #ffffff;
   }
 
   .top-main h2 {
@@ -277,21 +278,51 @@
     padding-bottom: 20px;
   }
 
-  .exam_table {
+  .show_table {
     flex-direction: row-reverse;
-    margin: 5px;
-    padding: 10px;
+    margin: 100px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 10px 10px;
+  }
+
+  .show_table td {
+    border-bottom: 1px solid #eaedef;
+    word-break: break-all;
+    padding: 40px;
+  }
+
+  .list_table {
+    width: 100%;
+    height: auto;
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
     text-align: center;
   }
 
-  table th {
-    background-color: #f5f5f5;
-    padding: 20px;
-    text-align: center;
+  .reserve {
+    margin: 20px;
+    border: 1px solid #eaedef;
+    width: 50%;
   }
- 
-  table td {
-    background-color: #f9ecd5;
-    padding: 20px;
-    text-align: center;
+  
+  .reserve_button{
+    margin: 30px;
+    padding: 10px;
+    width: 50%;
+    color: #333;
+    font-size: 18px;
+    font-weight: 300;
+    background-color: #fad463;
+    box-shadow: 0 5px 0 #fac320;
+    transition: 0.3s;
+  }
+
+  .reserve_button:hover {
+    background-color: #ff7c5c;
   }
