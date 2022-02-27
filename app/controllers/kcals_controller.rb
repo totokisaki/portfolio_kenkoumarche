@@ -7,8 +7,11 @@ class KcalsController < ApplicationController
 
   def create
     @kcal = Kcal.new(kcal_params)
-    @kcal.save
-    redirect_to kcal_path(@kcal) 
+    if @kcal.save
+      redirect_to kcal_path(@kcal) 
+    else
+      redirect_to("/kcals/new")
+    end
   end
 
   def kcal_params 
