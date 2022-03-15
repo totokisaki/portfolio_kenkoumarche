@@ -2,6 +2,12 @@
   <div class="top-message">
    <h2>健康marché</h2>
    <p>~食べ物で健康になる情報の市場~</p>
+   <% if user_signed_in? %>
+    <p><%= button_to "ログアウト", destroy_user_session_path, method: :delete, class:'top-loginlink' %></p>
+   <% else %>
+    <p><%= link_to "ログイン", new_user_session_path, class:'top-loginlink' %></p>
+    <p><%= link_to "新規登録", new_user_registration_path, class:'top-loginlink' %></p> 
+   <% end %>
   </div>
 
   <div class="top-about">
@@ -18,27 +24,23 @@
   </div>
 
   <div class="top-restaurant">
-  <div class="top-title" >おすすめのお店をさがす</div>
+  <div class="top-title" >美味しく健康に食べられるお店をさがす</div>
   <% if user_signed_in? %>
-  <p><%= link_to "お店をさがす", :restaurants, class:'top-link' %></p>
-  <p><%= link_to "店舗情報新規登録", :new_restaurant, class:'top-link' %></p>
-  <p><%= button_to "ログアウト", destroy_user_session_path, method: :delete, class:'top-link' %></p>
+   <p><%= link_to "お店をさがす", :restaurants, class:'top-link' %></p>
+   <p><%= link_to "店舗情報新規登録", :new_restaurant, class:'top-link' %></p>
   <% else %>
-  <p><%= link_to "ログイン", new_user_session_path, class: 'top-link' %></p>
-  <p><%= link_to "新規登録", new_user_registration_path, class: 'top-link' %></p> 
+   <p>ログインしてお店をさがしてみよう！</p>
   <% end %>
   </div>
 
   <div class="top-exam">
-  <div class="top-title" >検査から調べる</div>
+  <div class="top-title" >気になる検査項目からおすすめの食事を調べる</div>
   <% if user_signed_in? %>
-  <p><%= link_to "検査項目からさがす", :search_exams, class:'top-link' %></p>
-  <p><%= link_to "アドバイスを投稿する", :new_exam, class:'top-link' %></p>
-  <p><%= link_to "投稿履歴", :exams, class:'top-link' %></p>
-  <p><%= button_to "ログアウト", destroy_user_session_path, method: :delete, class:'top-link' %></p>
+   <p><%= link_to "検査項目からさがす", :search_exams, class:'top-link' %></p>
+   <p><%= link_to "アドバイスを投稿する", :new_exam, class:'top-link' %></p>
+   <p><%= link_to "投稿履歴", :exams, class:'top-link' %></p>
   <% else %>
-  <p><%= link_to "ログイン", new_user_session_path, class: 'top-link' %></p>
-  <p><%= link_to "新規登録", new_user_registration_path, class: 'top-link' %></p> 
+   <p>ログインしてお店をさがしてみよう！</p>
   <% end %>
   </div>  
 
@@ -46,15 +48,13 @@
   <div class="top-title" >個別相談のスケジュールを確認する</div>
   <% if user_signed_in? %>
    <p><%= link_to "予約一覧", :reserves, class:'top-link' %></p>
-   <p><%= button_to "ログアウト", destroy_user_session_path, method: :delete, class:'top-link' %></p>
   <% else %>
-   <p><%= link_to "ログイン", new_user_session_path, class: 'top-link' %></p>
-   <p><%= link_to "新規登録", new_user_registration_path, class: 'top-link' %></p> 
+   <p>ログインしてお店をさがしてみよう！</p>
   <% end %>
   </div>
 
   <div class="fotter">
-  <div class="top-title" >健康marché</div>
+   <div class="top-title" >健康marché</div>
   </div>
 
 </div>

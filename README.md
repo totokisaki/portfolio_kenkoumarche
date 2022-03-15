@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション名
 
-Things you may want to cover:
+健康 marche
 
-* Ruby version
+# アプリケーション概要
 
-* System dependencies
+食事や健康に興味がある方、健診でひっかかり生活を改善したい方のための情報共有アプリです。
 
-* Configuration
+# URL
 
-* Database creation
+https://git.heroku.com/tranquil-oasis-01124.git
 
-* Database initialization
+#　テスト用アカウント
 
-* How to run the test suite
+メールアドレス：a@a
+パスワード：aaaaaa
 
-* Services (job queues, cache servers, search engines, etc.)
+# 目指した課題解決
 
-* Deployment instructions
+病気にならないようにする「予防医学」の考え方を多くの方へ伝え、生活習慣や生活環境を改善して健康増進を図ることを目指し、このアプリを作成しました。
 
-* ...
+# 実装した機能
+
+1. 適正体重、必要エネルギー量（カロリー）の計算
+2. 健康に配慮したお店を調べる、口コミを見る書く
+3. 検査項目と栄養の関係を検索、投稿できる
+4. 3 を投稿した人に個別で相談の依頼ができる
