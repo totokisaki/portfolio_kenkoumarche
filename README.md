@@ -10,7 +10,7 @@
 
 # URL
 
-https://git.heroku.com/tranquil-oasis-01124.git
+https://tranquil-oasis-01124.herokuapp.com/
 
 #　テスト用アカウント
 
