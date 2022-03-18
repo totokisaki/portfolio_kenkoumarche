@@ -4,10 +4,6 @@
  
     <table class="show_table" >
       <tr>
-        <th> </th>
-        <td><%= image_tag @exam.exam_image , :size =>'300x300' %></td>
-      </tr>
-      <tr>
         <th>検査項目</th>
         <td><%= @exam.exam_item %></td>
       </tr>
@@ -20,12 +16,6 @@
         <td><%= @exam.exam_advice %></td>
       </tr>
     </table>
- 
-    <div>
-      <ul>
-        <li><%= link_to "一覧に戻る", :exams %></li>
-      </ul>
-    </div>
 
 
     <div class="page-top">

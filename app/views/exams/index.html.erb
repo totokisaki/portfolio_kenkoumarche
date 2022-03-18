@@ -5,7 +5,6 @@
     <table class="exam_table" >
       <thead>
         <tr>
-          <th>画像</th>
           <th>検査項目</th>
           <th>検査の目的</th>
           <th>食事・生活</th>
@@ -16,7 +15,6 @@
       <tbody>
         <% @exams.each do |exam| %>
           <tr>
-            <td><%= image_tag exam.exam_image, :size =>'150x150' %></td>
             <td><%= exam.exam_item %></td>
             <td><%= exam.exam_purpose %></td>
             <td><%= link_to "アドバイスをみる", exam %></td>

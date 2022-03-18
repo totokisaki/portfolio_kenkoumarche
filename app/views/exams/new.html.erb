@@ -5,31 +5,22 @@
 <%= form_with model: @exam do |f| %>
   <table>
     <tr>
-      <th><%= f.label :exam_image ,"画像" %></th>
-      <td><%= f.file_field :exam_image %></td>
-    </tr>
- 
-    <tr>
       <th><%= f.label :exam_item ,"検査項目" %></th>
       <td><%= f.text_field :exam_item %></td>
     </tr>
- 
     <tr>
       <th><%= f.label :exam_purpose ,"検査の目的" %></th>
       <td><%= f.text_field :exam_purpose %></td>
     </tr>
- 
     <tr>
       <th><%= f.label :exam_advice ,"食事・生活アドバイス" %></th>
       <td><%= f.text_area :exam_advice %></td>
     </tr>
-
     <tr>
       <%= f.hidden_field :user_id, value: current_user.id %>
     </tr>
-  
   </table>
- 
+
   <div>
     <ul>
       <li><%= f.submit "登録する" %></li>
