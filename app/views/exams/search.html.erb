@@ -14,7 +14,6 @@
       <tbody>
         <% @exams.each do |exam| %>
           <tr>
-            <td><%= image_tag exam.exam_image, :size =>'150x150' %></td>
             <td><%= exam.exam_item %></td>
             <td><%= exam.exam_purpose %></td>
             <td><%= link_to "アドバイスをみる", exam %></td>
