@@ -81,3 +81,5 @@ end
 gem 'devise'
 
 gem 'pry-rails'
+
+gem 'aws-sdk-s3'
