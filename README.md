@@ -14,8 +14,8 @@ https://tranquil-oasis-01124.herokuapp.com/
 
 #　テスト用アカウント
 
-メールアドレス：a@a
-パスワード：aaaaaa
+メールアドレス：test1@example.co.jp
+パスワード：testuser1
 
 # 目指した課題解決
 
