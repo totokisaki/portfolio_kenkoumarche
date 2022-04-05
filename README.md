@@ -19,9 +19,9 @@
 
 # ER 図
 
-![飲食店](https://github.com/totokisaki/portfolio_kenkoumarche/issues/5#issue-1192504479)
+![飲食店](https://user-images.githubusercontent.com/86472761/161663438-795fb290-9249-4f43-a78e-a31eebdf90af.png)
 
-![検査項目](https://github.com/totokisaki/portfolio_kenkoumarche/issues/4#issue-1192504077)
+![検査項目](https://user-images.githubusercontent.com/86472761/161663242-6ead2dee-cfe2-497b-940b-0f01f3a81f05.png)
 
 # URL
 
