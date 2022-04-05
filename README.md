@@ -1,8 +1,7 @@
 # アプリケーション名
 
-## 健康 marche
-
-![イメージ](https://gyazo.com/82c127592c9e37e9a782cadad53617e9.gif)
+健康 marche
+![イメージ](https://gyazo.com/2a07f4078e5f41084517c6bf62b18d07.gif)
 
 # アプリケーション概要
 
@@ -15,7 +14,7 @@
 # 実装した機能
 
 1. 適正体重、必要エネルギー量（カロリー）の計算
-   ![エネルギー量計算](https://gyazo.com/7e63accb8079013fb621d7189aa8b5bf.gif)
+   ![計算](https://gyazo.com/8c5ccfe9bb327fb902f1377a981474ca.gif)
 2. 健康に配慮したお店を調べる、口コミを見る書く
    ![飲食店](https://gyazo.com/6205c5c8b04d5230e6dc37b5314506c0.gif)
 3. 検査項目と栄養の関係を検索、投稿できる
