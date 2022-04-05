@@ -1,10 +1,6 @@
-# README
-
 # アプリケーション名
 
-健康 marche
-
-![トップ画面](https://github.com/totokisaki/portfolio_kenkoumarche/issues/6#issue-1192534348)
+## 健康 marche
 
 # アプリケーション概要
 
@@ -31,10 +27,10 @@
 
 https://tranquil-oasis-01124.herokuapp.com/
 
-#　テスト用アカウント
+# テスト用アカウント
 
-メールアドレス：test1@example.co.jp
-パスワード：testuser1
+- メールアドレス：test1@example.co.jp
+- パスワード：testuser1
 
 # 今後の計画
 
