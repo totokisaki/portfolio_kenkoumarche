@@ -13,7 +13,7 @@
 # 実装した機能
 
 1. 適正体重、必要エネルギー量（カロリー）の計算
-   ![計算](https://gyazo.com/5314751771b411ba8384d33e276fbd77.gif)
+   ![計算](https://user-images.githubusercontent.com/86472761/161995774-cd642fa4-0c07-4601-b766-d0436bd0deee.png)
 2. 健康に配慮したお店を調べる、口コミを見る書く
    ![飲食店](https://gyazo.com/6205c5c8b04d5230e6dc37b5314506c0.gif)
 3. 検査項目と栄養の関係を検索、投稿できる
