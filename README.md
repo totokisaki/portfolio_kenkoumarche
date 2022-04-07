@@ -19,6 +19,7 @@
 3. 検査項目と栄養の関係を検索、投稿できる
    ![検査項目](https://gyazo.com/6e6d397ad51034444f31cc9bd81cfe13.gif)
 4. 3 を投稿した人に個別で相談の依頼ができる
+   ![予約](https://user-images.githubusercontent.com/86472761/162261432-3ed5c852-b5b1-4851-8169-bda507f4c2aa.png)
 
 # ER 図
 
